@@ -9,7 +9,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
+
+<style>
     .header{
 color:white;
 
@@ -31,19 +32,19 @@ background: linear-gradient(to left, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/
   <div class="row">
     <div class="col-sm-4">
       <h3>Add Todo</h3>
-    <input type="text" name="name" class = "form-control" placeholder="todo name">
+    <input type="text" name="name" id= "name" class = "form-control" placeholder="todo name">
     <br>
-    <input type="text" name="description" class = "form-control" placeholder="todo description">
+    <input type="text" name="description" id = "description" class = "form-control" placeholder="todo description">
     <br>
    
-    <select name = "priority" class = "form-control">
+    <select name = "priority" id = "priority" class = "form-control">
         <option value="0">Priority</option>
         <option value="3">Urgent</option>
         <option value="2">Medium</option>
         <option value="1">Normal</option>
     </select>
     <br>
-    <button type="button" name="save" class = "form-control btn btn-success">Save</button>
+    <button type="button" name="save" id ="save-todo" class = "form-control btn btn-success">Save</button>
 
     </div>
     <div class="col-sm-6">
@@ -65,7 +66,8 @@ background: linear-gradient(to left, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/
             <td>Otto</td>
             <td>@mdo</td>
             <td>
-              <span><i class="fa-solid fa-trash"></i></span>
+             <i class="fa fa-trash" style="font-size:20px;color:red;"></i>
+             <i class="fa fa-edit" style="font-size:20px"></i>
             </td>
           </tr>
          
@@ -80,6 +82,27 @@ background: linear-gradient(to left, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/
     </div>
   </div>
 </div>
+<script>
+  function save_todo(){
+
+  }
+  function get_todo(){
+
+  }
+  function delete_todo(){
+
+  }
+  function update_todo(){
+
+  }
+  document.getElementById('save-todo').addEventListener('click', function(){
+    let name = document.getElementById('name').value
+    let description = document.getElementById('description').value
+    let priority = document.getElementById('priority').value
+
+    save_todo({name, description, priority})
+  })
+</script>
 
 </body>
 </html>
