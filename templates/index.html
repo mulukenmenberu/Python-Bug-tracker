@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+    .header{
+    background-color: linear-gradient(rgb(119, 27, 27), #fff, rgb(18, 33, 147), #fff);
+}
+</style>
+</head>
+<body>
+
+<div class="header jumbotron text-center">
+  <h1>My TODO App</h1>
+  <p>Python - Flask - PostgreSQL - SQLAlchemy</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Add Todo</h3>
+    <input type="text" name="name" class = "form-control" placeholder="todo name">
+    <br>
+    <input type="text" name="description" class = "form-control" placeholder="todo description">
+    <br>
+   
+    <select name = "priority" class = "form-control">
+        <option value="0">Priority</option>
+        <option value="3">Urgent</option>
+        <option value="2">Medium</option>
+        <option value="1">Normal</option>
+    </select>
+    <br>
+    <button type="button" name="save" class = "form-control btn btn-success">Save</button>
+
+    </div>
+    <div class="col-sm-6">
+      <h3>Available Todos</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Priority</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+         
+        </tbody>
+      </table>
+    </div>
+    <div class="col-sm-2">
+      <h3>Proprity Counter</h3>        
+      <p>Urgent: 1</p>
+      <p>Medium: 2</p>
+      <p>Low:0</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
